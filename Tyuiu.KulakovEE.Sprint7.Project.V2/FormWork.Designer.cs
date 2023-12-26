@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.saveFileDialogTable_KEE = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialogTable_KEE = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip_KEE = new System.Windows.Forms.MenuStrip();
@@ -71,6 +71,7 @@
             this.buttonAddOrders_KEE = new System.Windows.Forms.Button();
             this.buttonDownloadOrders_KEE = new System.Windows.Forms.Button();
             this.buttonOpenOrder_KEE = new System.Windows.Forms.Button();
+            this.поддержкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip_KEE.SuspendLayout();
             this.tabPageStats_KEE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -156,7 +157,8 @@
             // 
             this.toolStripMenuItemInfo_KEE.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemInstruction_KEE,
-            this.toolStripMenuItemAbout_KEE});
+            this.toolStripMenuItemAbout_KEE,
+            this.поддержкаToolStripMenuItem});
             this.toolStripMenuItemInfo_KEE.Font = new System.Drawing.Font("TL header RUS", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.toolStripMenuItemInfo_KEE.Name = "toolStripMenuItemInfo_KEE";
             this.toolStripMenuItemInfo_KEE.Size = new System.Drawing.Size(68, 20);
@@ -207,17 +209,17 @@
             // 
             // chart1
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart1.Legends.Add(legend6);
+            chartArea8.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chart1.Legends.Add(legend8);
             this.chart1.Location = new System.Drawing.Point(8, 3);
             this.chart1.Name = "chart1";
-            series6.ChartArea = "ChartArea1";
-            series6.IsVisibleInLegend = false;
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart1.Series.Add(series6);
+            series8.ChartArea = "ChartArea1";
+            series8.IsVisibleInLegend = false;
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.chart1.Series.Add(series8);
             this.chart1.Size = new System.Drawing.Size(1069, 460);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "Статы";
@@ -501,6 +503,13 @@
             this.buttonOpenOrder_KEE.UseVisualStyleBackColor = true;
             this.buttonOpenOrder_KEE.Click += new System.EventHandler(this.buttonOpen_KEE_Click);
             // 
+            // поддержкаToolStripMenuItem
+            // 
+            this.поддержкаToolStripMenuItem.Name = "поддержкаToolStripMenuItem";
+            this.поддержкаToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
+            this.поддержкаToolStripMenuItem.Text = "Поддержка";
+            this.поддержкаToolStripMenuItem.Click += new System.EventHandler(this.поддержкаToolStripMenuItem_Click);
+            // 
             // FormWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,6 +587,7 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ToolStripMenuItem поддержкаToolStripMenuItem;
     }
 }
 

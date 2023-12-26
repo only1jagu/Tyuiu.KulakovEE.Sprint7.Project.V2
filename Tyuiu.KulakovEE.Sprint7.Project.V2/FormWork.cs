@@ -240,6 +240,12 @@ namespace Tyuiu.KulakovEE.Sprint7.Project.V2
 
         }
 
+        private void поддержкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormHelpDevWin formHelpDevWin = new FormHelpDevWin();
+            formHelpDevWin.ShowDialog();
+        }
+
         private void dataGridViewTable_KEE_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
             int index = e.RowIndex;
