@@ -157,7 +157,7 @@ namespace Tyuiu.KulakovEE.Sprint7.Project.V2
             {
                 if (!row.IsNewRow && row.Cells[3] != null && row.Cells[3].Value != null)
                 {
-                    string label = row.Cells[1].Value.ToString();
+                    string label = row.Cells[0].Value.ToString();
                     double hours = Convert.ToDouble(row.Cells[3].Value);
                     series.Points.AddXY(label, hours);
                 }
@@ -182,7 +182,7 @@ namespace Tyuiu.KulakovEE.Sprint7.Project.V2
                     {
                         if (cell.Value != null && textBoxSearch_KEE.Text != string.Empty && cell.Value.ToString().Contains(textBoxSearch_KEE.Text))
                         {
-                            cell.Style.BackColor = Color.Yellow;
+                            cell.Style.BackColor = Color.LightGreen;
                         }
                         else
                         {
@@ -246,10 +246,22 @@ namespace Tyuiu.KulakovEE.Sprint7.Project.V2
             formHelpDevWin.ShowDialog();
         }
 
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+
+        {
+            
+         
+        }
+
         private void dataGridViewTable_KEE_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
             int index = e.RowIndex;
-            string indexStr = (index + 1).ToString();
+            string indexStr = (index).ToString();
             object header = this.dataGridViewTableOrders_KEE.Rows[index].HeaderCell.Value;
             if (header == null || !header.Equals(indexStr))
                 this.dataGridViewTableOrders_KEE.Rows[index].HeaderCell.Value = indexStr;
