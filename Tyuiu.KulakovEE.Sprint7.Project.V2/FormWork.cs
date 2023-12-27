@@ -10,29 +10,39 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 
 namespace Tyuiu.KulakovEE.Sprint7.Project.V2
 {
+  
     public partial class FormWork : Form
     {
+   
         public FormWork()
         {
             InitializeComponent();
-           
+          
         }
 
         public FormWork(FormMain formMain)
         {
+            
             InitializeComponent();
+          
+
+
         }
+
+
+
         DataService ds = new DataService();
         string openFilePath;
         int cols, rows;
 
         private void aboutProgramToolStripMenuItem_KEE_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Эта программа содержит в себе данные:\r* О заказах клиентов(Номер заказа, дата исполнения, стоимость заказа, название товара, цена, количество)", "О программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Эта программа содержит в себе данные:\r* ·        номер, название, адрес и телефон магазина;", "О программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void buttonOpen_KEE_Click(object sender, EventArgs e)
@@ -91,7 +101,7 @@ namespace Tyuiu.KulakovEE.Sprint7.Project.V2
             }
 
         }
-
+        
 
         private void buttonAdd_KEE_Click(object sender, EventArgs e)
         {
@@ -220,11 +230,7 @@ namespace Tyuiu.KulakovEE.Sprint7.Project.V2
 
         }
 
-        private void dataGridViewTableOrders_KEE_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+       
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -257,6 +263,15 @@ namespace Tyuiu.KulakovEE.Sprint7.Project.V2
             
          
         }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+       
+        
+        
 
         private void dataGridViewTable_KEE_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.saveFileDialogTable_KEE = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialogTable_KEE = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip_KEE = new System.Windows.Forms.MenuStrip();
@@ -65,13 +65,14 @@
             this.buttonDownloadOrders_KEE = new System.Windows.Forms.Button();
             this.buttonOpenOrder_KEE = new System.Windows.Forms.Button();
             this.dataGridViewTableOrders_KEE = new System.Windows.Forms.DataGridView();
-            this.buttonFilter_KEE = new System.Windows.Forms.Button();
-            this.tabControl_KEE = new System.Windows.Forms.TabControl();
             this.NumberOrder_KEE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateDone_KEE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceOrder_KEE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameOrder_KEE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonFilter_KEE = new System.Windows.Forms.Button();
+            this.tabControl_KEE = new System.Windows.Forms.TabControl();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.menuStrip_KEE.SuspendLayout();
             this.tabPageStats_KEE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -216,19 +217,19 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "Размер выручки";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Размер выручки";
-            this.chart1.Legends.Add(legend2);
+            chartArea3.Name = "Размер выручки";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Размер выручки";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(8, 3);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "Размер выручки";
-            series2.Legend = "Размер выручки";
-            series2.MarkerSize = 1;
-            series2.Name = "Размер выручки";
-            series2.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
-            series2.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
-            this.chart1.Series.Add(series2);
+            series3.ChartArea = "Размер выручки";
+            series3.Legend = "Размер выручки";
+            series3.MarkerSize = 1;
+            series3.Name = "Размер выручки";
+            series3.XAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            series3.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(1069, 460);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "Размер выручки";
@@ -454,8 +455,43 @@
             this.dataGridViewTableOrders_KEE.RowTemplate.Height = 24;
             this.dataGridViewTableOrders_KEE.Size = new System.Drawing.Size(1073, 445);
             this.dataGridViewTableOrders_KEE.TabIndex = 1;
-            this.dataGridViewTableOrders_KEE.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTableOrders_KEE_CellContentClick);
             this.dataGridViewTableOrders_KEE.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridViewTable_KEE_RowPrePaint);
+            // 
+            // NumberOrder_KEE
+            // 
+            this.NumberOrder_KEE.HeaderText = "Номер филиала";
+            this.NumberOrder_KEE.MinimumWidth = 6;
+            this.NumberOrder_KEE.Name = "NumberOrder_KEE";
+            this.NumberOrder_KEE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // DateDone_KEE
+            // 
+            this.DateDone_KEE.HeaderText = "Название магазина";
+            this.DateDone_KEE.MinimumWidth = 6;
+            this.DateDone_KEE.Name = "DateDone_KEE";
+            this.DateDone_KEE.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DateDone_KEE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // PriceOrder_KEE
+            // 
+            this.PriceOrder_KEE.HeaderText = "Адрес";
+            this.PriceOrder_KEE.MinimumWidth = 6;
+            this.PriceOrder_KEE.Name = "PriceOrder_KEE";
+            this.PriceOrder_KEE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Ежемесячная выручка";
+            this.Column1.Name = "Column1";
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // NameOrder_KEE
+            // 
+            this.NameOrder_KEE.HeaderText = "Контактный телефон";
+            this.NameOrder_KEE.MinimumWidth = 6;
+            this.NameOrder_KEE.Name = "NameOrder_KEE";
+            this.NameOrder_KEE.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.NameOrder_KEE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // buttonFilter_KEE
             // 
@@ -482,43 +518,20 @@
             this.tabControl_KEE.Size = new System.Drawing.Size(1095, 603);
             this.tabControl_KEE.TabIndex = 3;
             // 
-            // NumberOrder_KEE
+            // splitter1
             // 
-            this.NumberOrder_KEE.HeaderText = "Номер филиала";
-            this.NumberOrder_KEE.MinimumWidth = 6;
-            this.NumberOrder_KEE.Name = "NumberOrder_KEE";
-            // 
-            // DateDone_KEE
-            // 
-            this.DateDone_KEE.HeaderText = "Название магазина";
-            this.DateDone_KEE.MinimumWidth = 6;
-            this.DateDone_KEE.Name = "DateDone_KEE";
-            this.DateDone_KEE.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // PriceOrder_KEE
-            // 
-            this.PriceOrder_KEE.HeaderText = "Адрес";
-            this.PriceOrder_KEE.MinimumWidth = 6;
-            this.PriceOrder_KEE.Name = "PriceOrder_KEE";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Ежемесячная выручка";
-            this.Column1.Name = "Column1";
-            // 
-            // NameOrder_KEE
-            // 
-            this.NameOrder_KEE.HeaderText = "Контактный телефон";
-            this.NameOrder_KEE.MinimumWidth = 6;
-            this.NameOrder_KEE.Name = "NameOrder_KEE";
-            this.NameOrder_KEE.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.NameOrder_KEE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.splitter1.Location = new System.Drawing.Point(0, 24);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(3, 603);
+            this.splitter1.TabIndex = 5;
+            this.splitter1.TabStop = false;
             // 
             // FormWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 627);
+            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.tabControl_KEE);
             this.Controls.Add(this.menuStrip_KEE);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -592,6 +605,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceOrder_KEE;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameOrder_KEE;
+        private System.Windows.Forms.Splitter splitter1;
     }
 }
 
